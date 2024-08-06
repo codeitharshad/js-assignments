@@ -1,0 +1,26 @@
+<!-- Create an HTML file with a button and a paragraph. Write a JavaScript
+  function that changes the text of the paragraph to "Button Clicked!"
+   when the button is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Button</title>
+</head>
+<body>
+    <p id="para">Click the Button</p>
+    <button id="btn">Click me</button>
+</body>
+</html>
+
+<script>
+
+    function chageTheText(){
+        document.getElementById('para').innerText = "Button Clicked!!!";
+    }
+
+    document.getElementById('btn').addEventListener('click',chageTheText);
+
+</script>

@@ -1,0 +1,58 @@
+<!-- Create an HTML file with a button and a div. Write a JavaScript function 
+ that changes the background color of the div to a random color every time the
+  button is clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            border-color: black;
+            border-radius: 10px;
+            border-style: solid;
+        }
+
+        #btn {
+            margin-left: 50px;
+            border-color: black;
+            border-radius: 5px;
+            border-style: solid;
+        }
+
+        #btn:hover{
+            color: white;
+            background: rgb(58, 58, 58);
+            border-color: black;
+            border-radius: 5px;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">Change Color</button>
+</body>
+</html>
+
+<script>
+
+     function generateRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.getElementById('btn').addEventListener('click', function() {
+            document.getElementById('box').style.backgroundColor = generateRandomColor();
+        });
+
+</script>
