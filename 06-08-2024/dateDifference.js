@@ -1,3 +1,7 @@
+// Write a function named daysBetweenDates that takes two
+//  date strings in the format "YYYY-MM-DD" and returns the
+//  number of days between the two dates. Example input: 
+// "2024-01-01" and "2024-01-31", output: 30.
 
 function daysBetweenDates(date1, date2){
     
@@ -8,7 +12,7 @@ function daysBetweenDates(date1, date2){
     
     const daydifference = difference / (1000 * 60 * 60 * 24);
 
-    if(daydifference < 0 ){
+    if(daydifference < 0 ){36
         return daydifference * -1;
     }else{
         return daydifference;

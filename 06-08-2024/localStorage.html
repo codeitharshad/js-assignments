@@ -1,0 +1,46 @@
+<!-- Write a function named saveToLocalStorage that takes a key and
+  a value, and saves the value to local storage under the given key.
+   Write another function named getFromLocalStorage that retrieves
+    the value by key from local storage. -->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+
+  function saveObjectToLocalStorage(key, value) {
+    
+    const str = JSON.stringify(value);
+    localStorage.setItem(key, str);
+    
+  }
+  
+  function getObjectFromLocalStorage(key) {
+    const str = localStorage.getItem(key);
+    if (str) {
+      return JSON.parse(str);
+    } else {
+      return null;
+    }
+  }
+  
+  const objectToStore = {
+    name: "Harshad",
+    age: 24,
+  };
+  
+  saveObjectToLocalStorage("user", objectToStore);
+  
+  const recordFetched = getObjectFromLocalStorage("user");
+  console.log(recordFetched); 
+  
+</script>
