@@ -1,0 +1,28 @@
+<!-- Write a JavaScript function that changes the CSS styles of an HTML element (e.g., changes the background color and font size) when a button is clicked. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Button</title>
+</head>
+<body>
+    <h1 id="heading">Harshad</h1>
+    <button id="btn">Magic</button>
+</body>
+</html>
+
+<script>
+    function changeStyle(){
+        const heading = document.getElementById('heading');
+
+        heading.style.backgroundColor = "black";
+        heading.style.color = "white";
+        heading.style.fontSize = "50px";
+    }
+
+    document.getElementById('btn').addEventListener('click', changeStyle);
+
+</script>

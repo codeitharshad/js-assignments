@@ -1,0 +1,47 @@
+<!-- Create an HTML form with inputs for username and password. Write a JavaScript function that validates the form inputs (e.g., username must be at least 5 characters, password must be at least 8 characters) and displays appropriate error messages. -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formValidation</title>
+</head>
+<body style="background-color: black;">
+    <form id="formToValidate">
+        <label for="username" style="color: white;">User Name: </label>
+        <input type="text" id="username" name="username">
+        <br><br>
+
+        <label for="password" style="color: white;">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+
+        <button onclick="formValidation()">Submit</button>
+    </form>
+</body>
+</html>
+
+<script>
+    function formValidation(){
+
+        const userName = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+            
+        let err = "";
+
+        if (userName.length < 5) {
+            err += "Username must be at least 5 characters long.\n";
+        }
+
+        if (password.length < 8) {
+            err += "Password must be at least 8 characters long.\n";
+        }
+
+        if (err) {
+            alert(err);
+        } else {
+            alert("Form submitted successfully!");
+        }
+    }
+</script>
